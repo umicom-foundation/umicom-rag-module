@@ -72,6 +72,12 @@ target_link_libraries(umicom_rag_module PUBLIC
 umicom_apply_warnings(umicom_rag_module)
 umicom_apply_sanitizers(umicom_rag_module)
 
+include(
+    "${CMAKE_CURRENT_SOURCE_DIR}/../../framework/cmake/UmicomThinApplicationRuntime.cmake")
+umicom_extend_thin_application_runtime(
+    NAME "rag"
+    TARGET "umicom_rag_module")
+
 if(UMICOM_RAG_BUILD_CONSOLE)
     add_executable(umicom-rag-console
         src/console/main.c)

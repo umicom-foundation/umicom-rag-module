@@ -25,11 +25,23 @@ extern "C" {
 
 #define UMI_RAG_MODULE_API_VERSION 1U
 
+/**
+ * Provide the rag application id operation used by this module and its client
+ * applications.
+ */
 const char *umi_rag_application_id(void);
 
+/**
+ * Provide the rag application experience operation used by this module and its client
+ * applications.
+ */
 const UmiApplicationExperienceDefinition *
 umi_rag_application_experience(void);
 
+/**
+ * Provide the rag application status operation used by this module and its client
+ * applications.
+ */
 UmiStatus umi_rag_application_status(
     UmiApplicationExperienceStatus *out_status);
 

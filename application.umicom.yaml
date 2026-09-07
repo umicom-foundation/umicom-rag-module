@@ -6,6 +6,8 @@ application:
   short_name: RAG
   version: 0.1.0
   executable: umicom-rag-console
+  native_executable: umicom-rag
+  console_executable: umicom-rag-console
   aliases: [rag]
 
 framework:
@@ -14,6 +16,8 @@ framework:
 
 frontends:
   - console
+  # Shared Framework GTK layout preview; domain services require controllers.
+  - gtk
 
 entry:
   kind: workbench
